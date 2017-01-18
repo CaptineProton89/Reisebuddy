@@ -69,8 +69,8 @@ class LotusMailCommunicationService {
 	 */
 	handleEncodings(str) {
 		const trimString = str.replace(/\s/g, "");// there are some mysterious whitespaces in hex strings
-		//return trimString;
-		return /^([0-9A-Fa-f]{4})+$/.test(trimString) ? this.parseHexString(trimString) : str; // regex: exactly multiple 4byte hex
+		return trimString;
+		//return /^([0-9A-Fa-f]{4})+$/.test(trimString) ? this.parseHexString(trimString) : str; // regex: exactly multiple 4byte hex
 	}
 
 	/**
