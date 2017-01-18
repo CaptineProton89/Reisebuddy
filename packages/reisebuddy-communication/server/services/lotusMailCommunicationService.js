@@ -68,7 +68,8 @@ class LotusMailCommunicationService {
 	 * @return {string} the parsed hex or str if it doesn't look like a hexstring
 	 */
 	handleEncodings(str) {
-		const trimString = str.replace(/\s/g, ""); // there are some mysterious whitespaces in hex strings
+		const trimString = str.replace(/\s/g, "");// there are some mysterious whitespaces in hex strings
+		//return trimString;
 		return /^([0-9A-Fa-f]{4})+$/.test(trimString) ? this.parseHexString(trimString) : str; // regex: exactly multiple 4byte hex
 	}
 
