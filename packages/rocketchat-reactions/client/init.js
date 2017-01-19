@@ -35,7 +35,7 @@ Template.room.events({
 	}
 });
 
-Meteor.startup(function() {
+/*Meteor.startup(function() {
 	RocketChat.MessageAction.addButton({
 		id: 'reaction-message',
 		icon: 'icon-people-plus',
@@ -67,4 +67,4 @@ Meteor.startup(function() {
 		},
 		order: 22
 	});
-});
+});*/

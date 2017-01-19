@@ -78,7 +78,7 @@ Meteor.startup ->
 		if !target.closest('.message-cog-container').length and !target.is('.message-cog-container')
 			RocketChat.MessageAction.hideDropDown()
 
-	RocketChat.MessageAction.addButton
+	###RocketChat.MessageAction.addButton
 		id: 'edit-message'
 		icon: 'icon-pencil'
 		i18nLabel: 'Edit'
@@ -115,8 +115,8 @@ Meteor.startup ->
 			else
 				return true
 		order: 1
-
-	RocketChat.MessageAction.addButton
+###
+	###RocketChat.MessageAction.addButton
 		id: 'delete-message'
 		icon: 'icon-trash-alt'
 		i18nLabel: 'Delete'
@@ -147,7 +147,7 @@ Meteor.startup ->
 				return currentTsDiff < blockDeleteInMinutes
 			else
 				return true
-		order: 2
+		order: 2###
 
 	RocketChat.MessageAction.addButton
 		id: 'permalink'
