@@ -3,10 +3,12 @@
 		<form class="message-form" method="post" action="/">
 			{{> messagePopupConfig getPopupConfig}}
 			<div class="message-input">
-				<!--<div class="message-buttons file">
+				{{# if livechatFeatures }}
+				<div class="message-buttons file">
 					<i class="icon-attach file"></i>
 					<input type="file" accept="{{fileUploadAllowedMediaTypes}}">
-				</div>-->
+				</div>
+				{{/if }}
 				<div class="input-message-container">
 					<textarea dir="auto" name="msg" maxlength="{{maxMessageLength}}" class="input-message autogrow-short" placeholder="{{_ 'Message'}}"></textarea>
 
@@ -14,8 +16,7 @@
 						<i class="emoji-picker-icon icon-people"></i>
 					</div>
 				</div>
-
-				<!--<div class="message-buttons {{showMic}} {{showSend}}">
+				{{# if livechatFeatures }}<div class="message-buttons {{showMic}} {{showSend}}">
 					<div class="mic">
 						<i class="icon-mic" aria-label="{{_ "Record"}}"></i>
 					</div>
@@ -30,7 +31,8 @@
 					<div class="video-button">
 						<i class="icon-videocam" aria-label="{{_ "Record"}}"></i>
 					</div>
-				</div>-->
+				</div>
+				{{/if }}
 			</div>
 			<div class="users-typing">
 				{{#with usersTyping}}
