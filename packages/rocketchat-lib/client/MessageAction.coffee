@@ -79,7 +79,7 @@ Meteor.startup ->
 			RocketChat.MessageAction.hideDropDown()
 
 		toggle = RocketChat.settings.get('Reisebuddy_Edit_Message')
-		if toggle = false
+		if toggle == false
 			RocketChat.MessageAction.addButton
 				id: 'edit-message'
 				icon: 'icon-pencil'
