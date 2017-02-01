@@ -26,6 +26,7 @@
 						{{#if hasPhone}}
 							{{#each phone}} <p><i class="icon-phone"></i> {{phoneNumber}}</p> {{/each}}
 						{{/if}}
+
 						{{#if lastLogin}} <p><i class="icon-calendar"></i> {{_ "Created_at"}}: {{createdAt}}</p> {{/if}}
 						{{#if lastLogin}} <p><i class="icon-calendar"></i> {{_ "Last_login"}}: {{lastLogin}}</p> {{/if}}
 						{{#if services.facebook.id}} <p><i class="icon-facebook"></i><a href="{{services.facebook.link}}" target="_blank">{{services.facebook.name}}</a></p> {{/if}}
